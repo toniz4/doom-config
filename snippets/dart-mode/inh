@@ -1,0 +1,23 @@
+# -*- mode: snippet -*-
+# contributor: Cássio Ribeiro Alves de Ávila
+# name: InheritedWidget
+# group: flutter
+# --
+
+class $1 extends InheritedWidget {
+      const $1({
+            Key? key,
+            required Widget child,
+      }) : super(key: key, child: child);
+
+      static $1 of(BuildContext context) {
+             final $1? result = context.dependOnInheritedWidgetOfExactType<$1>();
+             assert(result != null, 'No $1 found in context');
+             return result!;
+      }
+
+      @override
+      bool updateShouldNotify($1 oldWidget) {
+           return $2;
+      }
+}
