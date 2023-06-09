@@ -106,6 +106,9 @@
   (set-popup-rule! " out\\*\\'" :side 'right)
   (add-hook! 'lsp-clojure-lsp-after-open-hook #'disable-lsp-completions))
 
+(map! :leader
+      "o m" #'emms-smart-browse)
+
 (after! emms
   (setq emms-source-file-default-directory "/mnt/extern/music/")
   (setq emms-browser-covers #'emms-browser-cache-thumbnail-async)

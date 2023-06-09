@@ -217,6 +217,9 @@ they are implemented.
 ** EMMS
 
 #+begin_src emacs-lisp
+(map! :leader
+      "o m" #'emms-smart-browse)
+
 (after! emms
   (setq emms-source-file-default-directory "/mnt/extern/music/")
   (setq emms-browser-covers #'emms-browser-cache-thumbnail-async)
